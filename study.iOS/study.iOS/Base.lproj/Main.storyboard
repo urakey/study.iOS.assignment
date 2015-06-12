@@ -20,10 +20,6 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="rXe-Rp-28e" id="hiF-0d-Bjs"/>
-                            <outlet property="delegate" destination="rXe-Rp-28e" id="Vkx-Tb-dnD"/>
-                        </connections>
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YeV-lC-VcT" userLabel="First Responder" sceneMemberID="firstResponder"/>

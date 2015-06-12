@@ -9,12 +9,28 @@
 import Foundation
 import UIKit
 
-class TimelineViewController: UITableViewController{
+class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var itemes = ["ちょこれーと", "こーひー", "いちご", "おそば"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        // let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("datas") as! UITableViewCell
+
+        cell.textLabel!.text = "てすと"
+        
+        return cell
     }
 }
