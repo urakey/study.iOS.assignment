@@ -21,6 +21,9 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="GQg-hI-O3L" id="x9m-e9-dEC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YeV-lC-VcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

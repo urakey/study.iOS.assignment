@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>398D988C-9141-4A9A-92B2-7F90A8A09C3F</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>study.iOS</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9257DEB1331EB81358B718285068DC8A8FE7C2C0</key>
 		<string>github.com:urakey/study.iOS.assignment.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>study.iOS/study.iOS.xcodeproj/project.xcworkspace</string>
+	<string>study.iOS/study.iOS.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9257DEB1331EB81358B718285068DC8A8FE7C2C0</key>
