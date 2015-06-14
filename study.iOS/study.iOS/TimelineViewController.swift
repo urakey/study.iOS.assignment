@@ -16,7 +16,7 @@ struct User {
     
     init() {
         account = "@urakey"
-        avatar = "icon.png"
+        avatar = "avatar_2.png"
         name = "akey"
     }
 }
