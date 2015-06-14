@@ -13,6 +13,9 @@
 		3C2CCDB21B2AD8CE006A8A6D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C2CCDB11B2AD8CE006A8A6D /* Images.xcassets */; };
 		3C2CCDB51B2AD8CE006A8A6D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C2CCDB31B2AD8CE006A8A6D /* LaunchScreen.xib */; };
 		3C2CCDC11B2AD8CE006A8A6D /* study_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2CCDC01B2AD8CE006A8A6D /* study_iOSTests.swift */; };
+		3CAAAFE61B2D08B600E28214 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAAAFE41B2D08B600E28214 /* MyTableViewCell.swift */; };
+		3CAAAFE71B2D08B600E28214 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CAAAFE51B2D08B600E28214 /* MyTableViewCell.xib */; };
+		3CAAAFE91B2D09E900E28214 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAAAFE81B2D09E900E28214 /* TimelineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		3C2CCDBA1B2AD8CE006A8A6D /* study.iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = study.iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2CCDBF1B2AD8CE006A8A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C2CCDC01B2AD8CE006A8A6D /* study_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = study_iOSTests.swift; sourceTree = "<group>"; };
+		3CAAAFE41B2D08B600E28214 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		3CAAAFE51B2D08B600E28214 /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		3CAAAFE81B2D09E900E28214 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +85,13 @@
 			children = (
 				3C2CCDAA1B2AD8CE006A8A6D /* AppDelegate.swift */,
 				3C2CCDAC1B2AD8CE006A8A6D /* ViewController.swift */,
+				3CAAAFE81B2D09E900E28214 /* TimelineViewController.swift */,
 				3C2CCDAE1B2AD8CE006A8A6D /* Main.storyboard */,
 				3C2CCDB11B2AD8CE006A8A6D /* Images.xcassets */,
 				3C2CCDB31B2AD8CE006A8A6D /* LaunchScreen.xib */,
 				3C2CCDA81B2AD8CE006A8A6D /* Supporting Files */,
+				3CAAAFE41B2D08B600E28214 /* MyTableViewCell.swift */,
+				3CAAAFE51B2D08B600E28214 /* MyTableViewCell.xib */,
 			);
 			path = study.iOS;
 			sourceTree = "<group>";
@@ -193,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C2CCDB01B2AD8CE006A8A6D /* Main.storyboard in Resources */,
+				3CAAAFE71B2D08B600E28214 /* MyTableViewCell.xib in Resources */,
 				3C2CCDB51B2AD8CE006A8A6D /* LaunchScreen.xib in Resources */,
 				3C2CCDB21B2AD8CE006A8A6D /* Images.xcassets in Resources */,
 			);
@@ -213,7 +223,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C2CCDAD1B2AD8CE006A8A6D /* ViewController.swift in Sources */,
+				3CAAAFE91B2D09E900E28214 /* TimelineViewController.swift in Sources */,
 				3C2CCDAB1B2AD8CE006A8A6D /* AppDelegate.swift in Sources */,
+				3CAAAFE61B2D08B600E28214 /* MyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +423,7 @@
 				3C2CCDC61B2AD8CE006A8A6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C2CCDC71B2AD8CE006A8A6D /* Build configuration list for PBXNativeTarget "study.iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +432,7 @@
 				3C2CCDC91B2AD8CE006A8A6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
