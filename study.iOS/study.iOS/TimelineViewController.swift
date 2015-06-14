@@ -9,21 +9,32 @@
 import UIKit
 
 // Dummy data
-struct TimelineCellData {
-    var name:User
-    var avatar:User
-    var tweet:Tweet
+struct User {
+    var account: String
+    var avatar: String
+    var name: String
     
-    enum User:String {
-        case name = "urakey"
-        case avatar = "icon.png"
+    init() {
+        account = "@urakey"
+        avatar = "icon.png"
+        name = "akey"
     }
-    
-    enum Tweet:String {
+}
+
+struct TimelineCellData {
+    var account: String
+    var avatar: String
+    var name: String
+    var tweet: Tweet
+    var date: String
+
+    // enum -> 列挙型
+    enum Tweet: String {
         case tweet1 = "ツイート1ツイート1ツイート1"
         case tweet2 = "ツイート2ツイート2ツイート2ツイート2ツイート2ツイート2"
-        case tweet3 = "ツイート3ツイート3ツイート3ツイート3"
+        case tweet3 = "ツイート3ツイート3ツイート3ツイート3ツイート3ツイート3ツイート3ツイート3"
     }
+
 }
 
 class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -36,10 +47,17 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         let tableView = UITableView(frame: self.view.frame, style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
         
-        let data1 = TimelineCellData(name:.name, avatar:.avatar, tweet:.tweet1)
-        let data2 = TimelineCellData(name:.name, avatar:.avatar, tweet:.tweet2)
-        let data3 = TimelineCellData(name:.name, avatar:.avatar, tweet:.tweet3)
-        tableData = [data1, data2, data2, data3, data2, data3, data3, data1]
+        let now = NSDate()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "Y/MM/dd"
+        
+        let user = User()
+        let date = dateFormatter.stringFromDate(now)
+        
+        let data1 = TimelineCellData(account: user.account, avatar: user.avatar, name: user.name, tweet: .tweet1, date: date)
+        let data2 = TimelineCellData(account: user.account, avatar: user.avatar, name: user.name, tweet: .tweet2, date: date)
+        let data3 = TimelineCellData(account: user.account, avatar: user.avatar, name: user.name, tweet: .tweet3, date: date)
+        tableData = [data1, data2, data2, data3, data2, data3, data3, data1, data3, data3]
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -64,15 +82,21 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MyTableViewCell
         let cellData = tableData[indexPath.row]
         
-        let avatar = cellData.avatar.rawValue
+        let account = cellData.account
+        cell.account?.text = account
+   
+        let avatar = cellData.avatar
         cell.avatar?.image = UIImage(named:avatar)
+
+        let name = cellData.name
+        cell.name?.text = name
         
         let tweet = cellData.tweet.rawValue
         cell.tweet?.text = tweet
-
-        let name = cellData.name.rawValue
-        cell.name?.text = name
         
+        let date = cellData.date
+        cell.date?.text = date
+
         return cell
     }
 

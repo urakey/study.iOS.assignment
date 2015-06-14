@@ -10,10 +10,12 @@ import UIKit
 
 class MyTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var account: UILabel!
     @IBOutlet weak var avatar: UIImageView!
-    @IBOutlet weak var tweet: UILabel!
     @IBOutlet weak var name: UILabel!
-    
+    @IBOutlet weak var tweet: UILabel!
+    @IBOutlet weak var date: UILabel!
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
