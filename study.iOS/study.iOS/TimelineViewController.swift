@@ -30,9 +30,9 @@ struct TimelineCellData {
 
     // enum -> 列挙型
     enum Tweet: String {
-        case tweet1 = "ツイート1ツイート1ツイート1"
-        case tweet2 = "ツイート2ツイート2ツイート2ツイート2ツイート2ツイート2"
-        case tweet3 = "ツイート3ツイート3ツイート3ツイート3ツイート3ツイート3ツイート3ツイート3"
+        case tweet1 = "🐻🐻🐻くまに相談してから相談 🐻🐻🐻"
+        case tweet2 = "今日覚えた言葉：ぬいぐるみデバッグ / 告白デバック"
+        case tweet3 = "いままで bundle install したらプロジェクトディレクトリにいんすとーるされると思い込んでて path 指定してなかった。。ていうのが今日の気づき"
     }
 
 }
@@ -46,7 +46,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let tableView = UITableView(frame: self.view.frame, style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
-        
+        tableView.rowHeight = UITableViewAutomaticDimension;
         let now = NSDate()
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "Y/MM/dd"
@@ -61,7 +61,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         
         tableView.delegate = self
         tableView.dataSource = self
-        
+
         let xib = UINib(nibName: "MyTableViewCell", bundle: nil)
         tableView.registerNib(xib, forCellReuseIdentifier: "Cell")
     }
@@ -109,7 +109,9 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     // セルの高さ
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MyTableViewCell
-        return cell.bounds.height
+        tableView.estimatedRowHeight = cell.bounds.height
+        tableView.rowHeight = UITableViewAutomaticDimension
+        return tableView.rowHeight
     }
 }
 

@@ -39,32 +39,35 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcP-kA-HjL">
-                        <rect key="frame" x="56" y="45" width="33" height="17"/>
-                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015/00/00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8I-7Y-qrP">
                         <rect key="frame" x="243" y="8" width="69" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcP-kA-HjL">
+                        <rect key="frame" x="56" y="45" width="256" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14" id="BOY-tp-1nk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Sb2-vh-bfr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="CAZ-68-uJ3"/>
-                    <constraint firstItem="X8I-7Y-qrP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Sb2-vh-bfr" secondAttribute="trailing" constant="86" id="GFW-ti-PP8"/>
-                    <constraint firstItem="Sb2-vh-bfr" firstAttribute="leading" secondItem="0eF-sR-RBc" secondAttribute="trailing" constant="8" id="I4x-OY-PEp"/>
+                    <constraint firstItem="Sb2-vh-bfr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="CxE-qZ-RCC"/>
+                    <constraint firstItem="ezn-Jf-uIi" firstAttribute="leading" secondItem="0eF-sR-RBc" secondAttribute="trailing" constant="8" id="GcB-nf-WCg"/>
+                    <constraint firstItem="fcP-kA-HjL" firstAttribute="top" secondItem="ezn-Jf-uIi" secondAttribute="bottom" constant="4" id="HQQ-SY-LPw"/>
                     <constraint firstItem="0eF-sR-RBc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="K5g-HT-76a"/>
-                    <constraint firstItem="fcP-kA-HjL" firstAttribute="top" secondItem="ezn-Jf-uIi" secondAttribute="bottom" constant="4" id="KN5-St-Vzt"/>
-                    <constraint firstItem="X8I-7Y-qrP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="LDg-iU-xD0"/>
-                    <constraint firstItem="X8I-7Y-qrP" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Ofd-GA-TYF"/>
+                    <constraint firstItem="X8I-7Y-qrP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="PHw-2y-y4v"/>
                     <constraint firstItem="0eF-sR-RBc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="RaA-Q4-y6g"/>
-                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="fcP-kA-HjL" secondAttribute="bottom" id="avG-wn-7aG"/>
-                    <constraint firstItem="ezn-Jf-uIi" firstAttribute="top" secondItem="Sb2-vh-bfr" secondAttribute="bottom" id="bSg-yZ-EIZ"/>
-                    <constraint firstItem="ezn-Jf-uIi" firstAttribute="leading" secondItem="0eF-sR-RBc" secondAttribute="trailing" constant="8" id="iej-Gk-gqu"/>
-                    <constraint firstItem="fcP-kA-HjL" firstAttribute="leading" secondItem="0eF-sR-RBc" secondAttribute="trailing" constant="8" id="mTs-1A-DA9"/>
-                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="fcP-kA-HjL" secondAttribute="trailing" id="yRj-2z-kzl"/>
+                    <constraint firstItem="X8I-7Y-qrP" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="WMY-rI-IfF"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="fcP-kA-HjL" secondAttribute="bottom" constant="7" id="Z5H-OI-X6j"/>
+                    <constraint firstItem="Sb2-vh-bfr" firstAttribute="leading" secondItem="0eF-sR-RBc" secondAttribute="trailing" constant="8" id="fro-tC-VBR"/>
+                    <constraint firstItem="fcP-kA-HjL" firstAttribute="leading" secondItem="0eF-sR-RBc" secondAttribute="trailing" constant="8" id="g7Y-gm-Um8"/>
+                    <constraint firstItem="X8I-7Y-qrP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Sb2-vh-bfr" secondAttribute="trailing" constant="10" id="jEz-sT-aHr"/>
+                    <constraint firstItem="ezn-Jf-uIi" firstAttribute="top" secondItem="Sb2-vh-bfr" secondAttribute="bottom" id="mam-md-R0s"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="fcP-kA-HjL" secondAttribute="trailing" id="zHM-hU-gPc"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
