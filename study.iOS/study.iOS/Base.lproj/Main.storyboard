@@ -17,9 +17,31 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="SQ3-q8-bJV" kind="presentation" identifier="toDetailViewController" id="HZ1-el-1ih"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="BjY-Z3-cFx">
+            <objects>
+                <viewController id="SQ3-q8-bJV" customClass="DetailViewController" customModule="study_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GFB-SX-kGU"/>
+                        <viewControllerLayoutGuide type="bottom" id="MeV-Dx-MVa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BVy-b1-IDm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7RI-ti-mLv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S71-lh-AUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045" y="168"/>
         </scene>
     </scenes>
 </document>

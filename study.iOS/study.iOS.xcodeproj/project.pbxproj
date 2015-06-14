@@ -16,6 +16,7 @@
 		3CAAAFE61B2D08B600E28214 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAAAFE41B2D08B600E28214 /* MyTableViewCell.swift */; };
 		3CAAAFE71B2D08B600E28214 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CAAAFE51B2D08B600E28214 /* MyTableViewCell.xib */; };
 		3CAAAFE91B2D09E900E28214 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CAAAFE81B2D09E900E28214 /* TimelineViewController.swift */; };
+		3CD474B21B2D81F9002B8275 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD474B11B2D81F9002B8275 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		3CAAAFE41B2D08B600E28214 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		3CAAAFE51B2D08B600E28214 /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		3CAAAFE81B2D09E900E28214 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		3CD474B11B2D81F9002B8275 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				3C2CCDA81B2AD8CE006A8A6D /* Supporting Files */,
 				3CAAAFE41B2D08B600E28214 /* MyTableViewCell.swift */,
 				3CAAAFE51B2D08B600E28214 /* MyTableViewCell.xib */,
+				3CD474B11B2D81F9002B8275 /* DetailViewController.swift */,
 			);
 			path = study.iOS;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			files = (
 				3C2CCDAD1B2AD8CE006A8A6D /* ViewController.swift in Sources */,
 				3CAAAFE91B2D09E900E28214 /* TimelineViewController.swift in Sources */,
+				3CD474B21B2D81F9002B8275 /* DetailViewController.swift in Sources */,
 				3C2CCDAB1B2AD8CE006A8A6D /* AppDelegate.swift in Sources */,
 				3CAAAFE61B2D08B600E28214 /* MyTableViewCell.swift in Sources */,
 			);

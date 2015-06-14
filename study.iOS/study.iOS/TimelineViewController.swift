@@ -113,5 +113,10 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         tableView.rowHeight = UITableViewAutomaticDimension
         return tableView.rowHeight
     }
+
+    // セルがタップされた時に画面遷移する
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("toDetailViewController", sender: self)
+    }
 }
 
