@@ -46,7 +46,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let tableView = UITableView(frame: self.view.frame, style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
-        tableView.rowHeight = UITableViewAutomaticDimension;
+
         let now = NSDate()
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "Y/MM/dd"
