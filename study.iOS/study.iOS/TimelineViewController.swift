@@ -41,6 +41,12 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
 
     var tableData:[TimelineCellData] = []
     
+    var selectedAccount: String!
+    var selectedAvatar: String!
+    var selectedName: String!
+    var selectedTweet: String!
+    var selectedDate: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,7 +63,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         let data1 = TimelineCellData(account: user.account, avatar: user.avatar, name: user.name, tweet: .tweet1, date: date)
         let data2 = TimelineCellData(account: user.account, avatar: user.avatar, name: user.name, tweet: .tweet2, date: date)
         let data3 = TimelineCellData(account: user.account, avatar: user.avatar, name: user.name, tweet: .tweet3, date: date)
-        tableData = [data1, data2, data2, data3, data2, data3, data3, data1, data3, data3]
+        self.tableData = [data1, data2, data2, data3, data2, data3, data3, data1, data3, data3]
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -70,23 +76,22 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
     // MARK: セルの行数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableData.count
+        return self.tableData.count
     }
     
     // MARK: セルの表示
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MyTableViewCell
-        let cellData = tableData[indexPath.row]
+        let cellData = self.tableData[indexPath.row]
         
         let account = cellData.account
         cell.account?.text = account
    
         let avatar = cellData.avatar
-        cell.avatar?.image = UIImage(named:avatar)
+        cell.avatar?.image = UIImage(named: avatar)
 
         let name = cellData.name
         cell.name?.text = name
@@ -116,12 +121,32 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
 
     // セルがタップされた時に画面遷移する
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cellData = self.tableData[indexPath.row]
+        
+        // 次の画面に渡すパラメーターをセットする
+        self.selectedAccount = cellData.account
+        self.selectedAvatar = cellData.avatar
+        self.selectedName = cellData.name
+        self.selectedTweet = cellData.tweet.rawValue
+        self.selectedDate = cellData.date
+        
         performSegueWithIdentifier("toDetailViewController", sender: self)
     }
 
     // DetailViewController から戻ってきた時の処理
-    @IBAction func backFromDetailViewController(segue:UIStoryboardSegue){
+    @IBAction func backFromDetailViewController(segue: UIStoryboardSegue) {
         NSLog("TimelineViewController#backFromDetailViewController")
+    }
+
+    
+    // MEMO: prepareForSegueはSegue はビューが遷移するタイミングで呼ばれるもの
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+        var detailVC: DetailViewController = segue.destinationViewController as! DetailViewController
+        detailVC.selectedAccount = self.selectedAccount
+        detailVC.selectedAvatar = self.selectedAvatar
+        detailVC.selectedName = self.selectedName
+        detailVC.selectedTweet = self.selectedTweet
+        detailVC.selectedDate = self.selectedDate
     }
 }
 
