@@ -46,7 +46,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let tableView = UITableView(frame: self.view.frame, style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
-        tableView.rowHeight = UITableViewAutomaticDimension;
+
         let now = NSDate()
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "Y/MM/dd"
@@ -117,6 +117,11 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     // セルがタップされた時に画面遷移する
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier("toDetailViewController", sender: self)
+    }
+
+    // DetailViewController から戻ってきた時の処理
+    @IBAction func backFromDetailViewController(segue:UIStoryboardSegue){
+        NSLog("TimelineViewController#backFromDetailViewController")
     }
 }
 

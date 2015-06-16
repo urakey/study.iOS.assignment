@@ -1,5 +1,5 @@
 //
-//  ItemViewController.swift
+//  DetailViewController.swift
 //  study.iOS
 //
 //  Created by Aki Fukayama on 2015/06/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemViewController: UIViewController {
+class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
