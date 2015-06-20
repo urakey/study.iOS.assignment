@@ -26,7 +26,6 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        println(self.selectedName)
         self.account?.text = self.selectedAccount
         self.avatar?.image = UIImage(named: self.selectedAvatar)
         self.name?.text = self.selectedName

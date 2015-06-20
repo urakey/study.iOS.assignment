@@ -37,7 +37,7 @@ struct TimelineCellData {
 
 }
 
-class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TimelineViewController: UINavigationController, UITableViewDataSource, UITableViewDelegate {
 
     var tableData:[TimelineCellData] = []
     
@@ -130,12 +130,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         self.selectedTweet = cellData.tweet.rawValue
         self.selectedDate = cellData.date
         
-        performSegueWithIdentifier("toDetailViewController", sender: self)
-    }
-
-    // DetailViewController から戻ってきた時の処理
-    @IBAction func backFromDetailViewController(segue: UIStoryboardSegue) {
-        NSLog("TimelineViewController#backFromDetailViewController")
+        performSegueWithIdentifier("pushToDetailViewController", sender: self)
     }
 
     
